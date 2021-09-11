@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <h1>MEDICAL INSURANCE CHARGES PREDICTION</h1>
+        <div class="container" style="color:black">  
+            <div id="content" style="text-align: center;">
+    
+        <form action="/predict" method='POST'>
+            <label for='Age'> Age:</label><br><br>
+            <input type="number" id="Age" name="Age" value="0"><br><br>
+            <label for="Sex">Sex:</label><br><br>
+            <select name="Sex" id="Sex">
+                <option value="male">male</option>
+                <option value="female">female</option>
+            </select><br><br>
+            <label for="bmi">BMI:</label><br><br>
+            <input type="number" step="0.01" id="bmi" name="bmi" value="0"><br><br>
+            <label for="Smoker">Smoker:</label><br><br>
+            
+            <select name="Smoker" id="Smoker">
+                <option value="yes">yes</option>
+                <option value=no>no</option>
+            </select><br><br>
+            <label for="region">Region 1:</label><br><br>
+            <select name="region" id="region">
+                <option value="north">north</option>
+                <option value="south">south</option>
+            </select><br><br>
+            <label for="region_2">Region 2:</label><br><br>
+            <select name="region_2" id="region_2">
+                <option value="east">east</option>
+                <option value="west">west</option>
+            </select><br><br>
+            <label for="children">No. of Children:</label><br><br>
+            <input type="number" id="children" name="children" value="0"><br><br><br>
+    
+
+
+            <button class="block">Predict!</button>
+            
+
+
+        </form>
+        <br><br><font size="+3">{{pred_text}}</font>
+    </div>
+</div>
+<style>
+    body {background-color:darkgrey;
+          text-align: center;
+          padding:0px;
+          }
+  .block {
+    display: block;
+    width: 20%;
+    border: none;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block:hover {
+    background-color: #ddd;
+    color: black;
+}      
+</style>
+
+    </body>
+
+</html>
